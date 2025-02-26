@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Электронный дневник</title>
+</head>
+<body>
+    <div class="container">
+        <h2>📘 Электронный дневник</h2>
+        <input type="text" id="subject" placeholder="Предмет">
+        <input type="number" id="grade" placeholder="Оценка" min="1" max="5">
+        <button onclick="addGrade()">Добавить</button>
+        <button onclick="openModal()">Показать все оценки</button>
+        <p class="average">Средний балл: <span id="average">0</span></p>
+        <ul id="gradeList"></ul>
+    </div>
+    <div id="gradeModal" class="modal">
+        <div class="modal-content">
+            <h3>Список оценок</h3>
+            <ul id="modalGradeList"></ul>
+            <button class="close-btn" onclick="clearGrades()">Очистить все</button>
+            <button class="close-btn" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
